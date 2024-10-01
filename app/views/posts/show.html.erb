@@ -1,0 +1,27 @@
+<%= render @post %>
+
+<h2 class="font-bold text-lg text-center">The Comments Section</h2>
+
+<div class="text-center my-4">
+  <%= link_to "Leave a Comment", new_comment_path(post_id: @post.id, user_id: current_user.id), class: "bg-green-200 rounded px-4 py-2" %>
+</div>
+
+<% if @comments.any? %>
+  <div class="px-4 sm:px-0 sm:w-2/3 m-auto mb-8">
+    <% @comments.each do |comment| %>
+      <p class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-0 border-t border-t-1 border-t-gray-300">
+        <%= comment.post.user.email %><br>
+        <%= comment.created_at %><br>
+        <%= comment.body %>
+      </p>
+    <% end %>
+  </div>
+<% end %>
+
+<% if current_user == @post.user %>
+  <div class="flex justify-between my-8 px-4 sm:px-0 sm:w-2/3 m-auto">
+    <%= link_to "Edit this post", edit_post_path(@post), class: "px-4 py-2 bg-blue-200 hover:bg-blue-400 rounded-lg" %>
+    <%= link_to "Home", root_path, class: "px-4 py-2 bg-transparent text-blue-500 rounded-lg" %>
+    <%= button_to "Destroy this post", @post, method: :delete, class: "px-4 py-2 bg-red-200 hover:bg-red-400 rounded-lg" %>
+  </div>
+<% end %>
