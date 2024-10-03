@@ -36,4 +36,19 @@ class ApiClient
     response = https.request(request)
     JSON.parse(response.read_body)
   end
+
+  def remove_todo(id)
+    require "uri"
+    require "net/http"
+
+    url = URI("https://jsonplaceholder.typicode.com/todos/#{id}")
+
+    https = Net::HTTP.new(url.host, url.port)
+    https.use_ssl = true
+
+    request = Net::HTTP::Delete.new(url)
+
+    response = https.request(request)
+    response.code
+  end
 end

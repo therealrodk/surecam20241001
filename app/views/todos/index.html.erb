@@ -2,8 +2,9 @@
   <h1 class="font-bold text-lg text-center">TODOs</h1>
 
   <% @todos.each do |todo| %>
-    <h2>
+    <h2 class="flex mb-4">
       <%= todo["id"] %>. <%= todo["title"] %>
+      <%= button_to "X", remove_todo_path(id: todo["id"]), method: :delete, class: "ml-2 px-3 bg-red-200 hover:bg-red-100 rounded-full", form: { data: { turbo_confirm: "Are you sure you want to delete TODO ##{todo["id"]}" } } %>
     </h2>
   <% end %>
 

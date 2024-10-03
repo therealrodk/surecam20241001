@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get "all_todos", to: "todos#index", as: :all_todos
   post "create_todo", to: "todos#create", as: :create_todo
   get "new_todo", to: "todos#new", as: :new_todo
+  delete "remove_todo/:id", to: "todos#destroy", as: :remove_todo
   devise_for :users
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
