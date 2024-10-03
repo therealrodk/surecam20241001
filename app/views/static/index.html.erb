@@ -4,9 +4,9 @@
   <% if user_signed_in? %>
     <p>
       <% if params[:view_all].present? %>
-        <%= link_to " View Only My Posts", root_path %>
+        <%= link_to " View Only My Posts", root_path, class: "px-4 py-2 bg-blue-200 hover:bg-blue-400 rounded-lg" %>
       <% else %>
-        <%= link_to "View All Posts", root_path(view_all: true) %>
+        <%= link_to "View All Posts", root_path(view_all: true), class: "px-4 py-2 bg-blue-200 hover:bg-blue-400 rounded-lg" %>
       <% end %>
     </p>
     <p class="mt-4">
@@ -37,3 +37,17 @@
 <p class="mt-4 text-center">
   <%= link_to "New TODO", new_todo_path, class: "px-4 py-2 bg-blue-200 hover:bg-blue-400 rounded-lg" %>
 </p>
+
+<div class="text-center w-64 mx-auto">
+  <h2 class="font-bold text-xl my-8 text-center">Algorithms</h2>
+
+  <%= form_with url: show_permutations_path, method: :post, data: { turbo: false } do |f| %>
+    <div class="form-group my-4">
+      <%= f.label :file, "Upload a text file:" %>
+      <%= f.file_field :file %>
+    </div>
+    <div class="form-group">
+      <%= f.submit "Process File", class: "px-4 py-2 bg-blue-200 hover:bg-blue-400 rounded-lg" %>
+    </div>
+  <% end %>
+</div>
