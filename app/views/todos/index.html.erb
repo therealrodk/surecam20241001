@@ -1,0 +1,13 @@
+<div class="px-4 sm:px-0 sm:w-2/3 m-auto">
+  <h1 class="font-bold text-lg text-center">TODOs</h1>
+
+  <% @todos.each do |todo| %>
+    <h2>
+      <%= todo["id"] %>. <%= todo["title"] %>
+    </h2>
+  <% end %>
+
+  <p class="text-center my-8">
+    <%= link_to "Home", root_path, class: "text-blue-500" %>
+  </p>
+</div>

@@ -1,0 +1,9 @@
+<% content_for :title, "New TODO" %>
+
+<div class="px-4 sm:px-0 sm:w-2/3 m-auto">
+  <h1 class="text-lg text-center font-bold mt-4 pb-8">
+    <%= link_to "Home", root_path, class: "text-blue-500" %> > New TODO
+  </h1>
+
+  <%= render "form" %>
+</div>
