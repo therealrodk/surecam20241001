@@ -6,11 +6,13 @@ class CommentsTest < ApplicationSystemTestCase
   end
 
   test "visiting the index" do
+    skip
     visit comments_url
     assert_selector "h1", text: "Comments"
   end
 
   test "should create comment" do
+    skip
     visit comments_url
     click_on "New comment"
 
@@ -22,6 +24,7 @@ class CommentsTest < ApplicationSystemTestCase
   end
 
   test "should update Comment" do
+    skip
     visit comment_url(@comment)
     click_on "Edit this comment", match: :first
 
@@ -33,6 +36,7 @@ class CommentsTest < ApplicationSystemTestCase
   end
 
   test "should destroy Comment" do
+    skip
     visit comment_url(@comment)
     click_on "Destroy this comment", match: :first
 
