@@ -1,7 +1,7 @@
 class StaticController < ApplicationController
   def index
     if user_signed_in?
-      @posts = params[:view_all] == "true" ? Post.active.newest_first : @posts = current_user.posts.newest_first
+      @posts = (params[:view_all] == "true") ? Post.active.newest_first : @posts = current_user.posts.newest_first
       @user_created = true
     else
       @posts = Post.active.newest_first

@@ -25,7 +25,9 @@ class CommentsControllerTest < ActionDispatch::IntegrationTest
           comment: {
             post_id: @post.id,
             user_id: @user.id,
-            body: 'Body text' } }
+            body: "Body text"
+          }
+        }
       end
 
       assert_redirected_to post_url(@post)
@@ -45,7 +47,9 @@ class CommentsControllerTest < ActionDispatch::IntegrationTest
     test "should update comment" do
       patch comment_url(@comment), params: {
         comment: {
-          post_id: @comment.post_id } }
+          post_id: @comment.post_id
+        }
+      }
       assert_redirected_to post_url(@comment.post_id)
     end
 

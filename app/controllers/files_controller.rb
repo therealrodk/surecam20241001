@@ -18,12 +18,12 @@ class FilesController < ApplicationController
 
   def generate_output(file)
     strings = file.split("\n")
-    output = ''
+    output = ""
 
     strings.each do |string|
       permutations = string.chars.permutation.map(&:join)
 
-      sorted_permutations = permutations.sort.join(',')
+      sorted_permutations = permutations.sort.join(",")
       output += sorted_permutations
       output += "\n"
     end
