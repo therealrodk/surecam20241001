@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7bee375-6209-4008-a294-a93ce2567ca0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/static_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/static_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/static/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/static/index.html.erb" afterDir="false" />
-    </list>
+    <list default="true" id="d7bee375-6209-4008-a294-a93ce2567ca0" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,7 +30,7 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Rails.surecam20241001.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "api",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/speedygonzalez/Sites/CodingEvaluation/surecam20241001/test/controllers",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -135,7 +131,7 @@
       <option name="presentableId" value="Default" />
       <updated>1727798760470</updated>
       <workItem from="1727798761754" duration="934000" />
-      <workItem from="1727800020930" duration="35162000" />
+      <workItem from="1727800020930" duration="35544000" />
     </task>
     <servers />
   </component>

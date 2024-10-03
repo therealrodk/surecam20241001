@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  resources :comments, except: [:edit, :index, :show]
-  resources :posts, except: [:index]
-  resources :static, only: [:index]
+  resources :comments, except: [ :edit, :index, :show ]
+  resources :posts, except: [ :index ]
+  resources :static, only: [ :index ]
 
   get "all_todos", to: "todos#index", as: :all_todos
   post "create_todo", to: "todos#create", as: :create_todo
