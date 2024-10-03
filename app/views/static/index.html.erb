@@ -1,8 +1,16 @@
 <h1 class="font-bold text-xl my-4 text-center">SureCam Coding Test App</h1>
 
-<p class="text-center mb-4 text-red-500">
-  NOTE: Please be sure to run the seeds file to load blog posts.
-</p>
+<% if Post.none? %>
+  <p class="text-center mb-4 text-red-500">
+    NOTE: Please be sure to run the seeds file to load blog posts.
+  </p>
+<% end %>
+
+<% unless @user_created == true %>
+  <p class="text-center mb-4 text-red-500">
+    NOTE: You will also want to sign up and create your own posts.
+  </p>
+<% end %>
 
 <div class="text-center w-64 mx-auto">
   <% if user_signed_in? %>
