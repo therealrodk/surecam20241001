@@ -57,5 +57,5 @@ group :test do
 end
 
 gem "devise", "~> 4.9"
-gem "font-awesome-rails", "~> 4.7", ">= 4.7.0.8"
+gem "font-awesome-rails", "~> 4.7"
 gem "tailwindcss-rails", "~> 2.7"
